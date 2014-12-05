@@ -1,0 +1,215 @@
+body {
+  background: url("../img/symphony.png");
+  background-attachment: fixed;
+}
+
+/* Layout of gallery items*/
+figure { 
+  background: #fff;
+  border-bottom: 10px solid #fff;
+  border-radius: 4px;
+  box-shadow: 2px 2px 15px #696969;
+  padding: 10px;
+  
+  /* layout */
+  float: left;
+  height: 250px;
+  margin: 40px;
+  width: 300px;
+  
+  /* set relative parent for each time*/
+  position: relative;
+}
+
+h1 {
+  font-family: 'Poiret One', cursive;
+  color: #407CC9;
+  padding: 5px 5px;
+  text-align: center;
+  
+  
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
+  color: #90C0C0;
+}
+
+figure {
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #9794D2;
+}
+
+/* Header */
+figure h5 {
+  background: rgba(255,255,255,.75);
+  color: #53bf6b;
+  padding: 5px;
+  text-align: right;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  
+  /* absolute position headings */
+  position: absolute;
+  top: 0;
+  right: -40px;
+
+  /* 
+     * absolutely positioned elements only as wide as content
+     * optionally set widths
+  */
+
+  width: 100%;
+
+ /* bring to front */ 
+  z-index: 2;
+}
+
+
+
+/*Thumbnail Positioning */
+
+figure h2 {
+  position: relative;
+}
+
+
+
+/* Caption Container */
+.thumbnail {
+
+  /* parent for caption */ 
+  position: relative;
+  /* 
+    * set to any dimensions
+    * matched to size of image in this case
+  */   
+  height: 200px;
+  width: 300px;
+  /* hide overflowing content */ 
+  overflow: hidden;
+}
+
+/* Caption - First Frame */
+.thumbnail p {
+  background: rgba(255,255,255,.75);
+  font-size: .75em;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #181818;
+  padding: .25em;
+  text-align: center;
+  
+  position: absolute;
+  margin: 0;
+  /* value is height of image */   
+  bottom: -150px;
+  
+  transition: bottom 1s ease-in;
+}
+
+/* Caption - Last Frame */
+.thumbnail:hover p {
+  bottom: 0;
+
+  transition: bottom 1s ease-in;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Gallery Stying */
+.gallery .control-button {
+  color: #ccc;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.gallery .control-button:hover {
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*
+  Theme controls how everything looks in Gallery CSS.
+*/
+.gallery {
+  position: relative;
+  padding: 40px;
+  display: inherit;
+}
+.gallery .item {
+  height: 400px;
+  overflow: hidden;
+  text-align: center;
+  background: #4d87e2;
+}
+.gallery .controls {
+  position: absolute;
+  bottom: -120px;
+  width: 100%;
+  text-align: center;
+}
+
+.gallery .controls img {
+  border: 5px solid #000;
+
+}
+
+.gallery .control-button {
+  display: inline-block;
+  margin: 0 .02em;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  transition: color .1s;
+  margin: auto;
+  
+}
+
+
+/*Media Queries*/
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+  
+  body {
+    background: yellow !important;
+  }
+
+
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  
+  body {
+    background: green !important;
+    z-index: 2;
+  }
+
+
+
+
+
+
+/* Show Grid 
+.showgrid {
+  background: url("../img/grid-bg.png") repeat-y;
+}*/
+
